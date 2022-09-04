@@ -1,0 +1,42 @@
+.userInfo {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    display: inline;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__album {
+    cursor: pointer;
+    display: inline;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__post {
+    display: inline;
+    font-size: 31px;
+    margin: 11px;
+  }
+
+  &__linkBlock {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__item {
+    display: inline;
+    font-size: 27px;
+    margin: 11px;
+    width: 220px;
+  }
+}
