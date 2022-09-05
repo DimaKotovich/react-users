@@ -17,9 +17,9 @@ export const TodoList = ({ setActive }) => {
   },[dispatch]);
 
   return (
-    <ul className="TodoList">
+    <ul className="todoList">
       {users.map(user => (
-        <li className="TodoList__items" key={user.id}>
+        <li className="todoList__items" key={user.id}>
           <UserInfo
             user={user}
             setActive={setActive}
