@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './UserInfo.scss';
-import { getPosts,getAlbums } from '../../api/api';
+import { getAlbums } from '../../api/api';
 import { NavLink, useParams } from 'react-router-dom';
 import Post from '../../image/posts.png'
 import Album from '../../image/albums.png'
 import Email from '../../image/email.png'
+import { useDispatch } from 'react-redux';
 
 
-export const UserInfo = ({ user,getPosts,setActive }) => {
-  
+export const UserInfo = ({ user,setActive }) => {
+
   const { userId } = useParams();
-  // const getPost = async (userId) => {
-  //   const peopleServer = await getPosts(userId);
-  //   console.log(peopleServer)
-  // };
 
-  const getAlbum = async (userId) => {
-    const peopleServer = await getAlbums(userId);
-    console.log(peopleServer)
+  const dispatch = useDispatch();
+
+  const getAlbum = (userId) => {
+    dispatch(getAlbums(userId));
     setActive(true);
   };
 
@@ -66,7 +64,6 @@ export const UserInfo = ({ user,getPosts,setActive }) => {
             className="userInfo__image"
             src={Post}
             alt="IconPost"
-            onClick={() => getPosts(user.id)}
           />
         </NavLink>
 

@@ -11,6 +11,10 @@
     display: inline;
     width: 50px;
     height: 50px;
+
+    &--completed {
+      margin-left: 5px;
+    }
   }
 
   &__album {
@@ -39,4 +43,11 @@
     margin: 11px;
     width: 220px;
   }
+  
+  &__cross {
+    display: inline;
+    width: 40px;
+    height: 40px;
+  }
+
 }
