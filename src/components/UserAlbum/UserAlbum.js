@@ -21,14 +21,14 @@ export const UserAlbum = ({ active,setActive }) => {
         />
         {albums.map(album => (
           <ul className='album'>
-            <li className='album__item'>
+            <li className='album__item' key={album.id}>
               <div className='album__block'>
                 <img
                   className="album__block--image"
                   src={Album}
                   alt="IconAlbum"
                 />
-                <span>{album.title}</span>
+                <span>{album ? album.title : null}</span>
               </div>
             </li>
           </ul>

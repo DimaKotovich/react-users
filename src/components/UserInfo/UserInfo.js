@@ -28,7 +28,7 @@ export const UserInfo = ({ user,setActive }) => {
           alt="IconName"
         />
         <p className="userInfo__item">
-          {user.name}
+          {user ? user.name : null}
         </p>
       </div>
       
@@ -39,7 +39,7 @@ export const UserInfo = ({ user,setActive }) => {
           alt="IconUserName"
         />
         <p className="userInfo__item">
-          {user.username}
+          {user ? user.username : null}
         </p>
       </div>
 

@@ -21,8 +21,6 @@ export const UserPost = ( ) => {
     dispatch(getPosts(userid.userId));
   },[dispatch]);
 
-  console.log(posts)
-
   return (
     <ul className='posts'>
       {posts.map(post => (
@@ -35,7 +33,7 @@ export const UserPost = ( ) => {
                   alt="BodyImage"
                 />
                 <span className="commentInfo__item-text">
-                  {post.title}
+                  {post ? post.title : null}
                 </span>
               </div>
 
