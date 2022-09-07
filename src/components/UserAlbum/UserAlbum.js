@@ -20,8 +20,8 @@ export const UserAlbum = ({ active,setActive }) => {
           onClick={() => setActive(false)}
         />
         {albums.map(album => (
-          <ul className='album'>
-            <li className='album__item' key={album.id}>
+          <ul className='album' key={album.id}>
+            <li className='album__item'>
               <div className='album__block'>
                 <img
                   className="album__block--image"
